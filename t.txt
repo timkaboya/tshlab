@@ -1,0 +1,41 @@
+Created environment variable SYNCFD=7
+#
+# trace09.txt - Send SIGTSTP to foreground job.
+#
+runtrace: command=/bin/echo line=/bin/echo -e tsh\076 ./mytstpp
+runtrace: Sending '/bin/echo -e tsh\076 ./mytstpp' to shell
+runtrace: command=NEXT line=NEXT
+tsh> ./mytstpp
+Added job [1] 1764 /bin/echo -e tsh\076 ./mytstpp
+sigchld_handler: entering
+sigchld_handler: Job [1] (1764) in handler 
+sigchld_handler: Job [1] (1764) terminates OK (status 0)
+sigchld_handler: exiting
+runtrace: command=./mytstpp line=./mytstpp
+runtrace: Sending './mytstpp' to shell
+runtrace: command=NEXT line=NEXT
+Added job [1] 1765 ./mytstpp
+sigtstp_handler: entering
+sigtstp_handler: Job [sigchld_handler: entering
+sigchld_handler: Job [1] (1765) in handler 
+Job [1] (1765) stopped by signal 20
+sigchld_handler: exiting
+1] (1765) stopped 
+sigtstp_handler: entering
+runtrace: Ignoring blank line
+runtrace: command=/bin/echo line=/bin/echo -e tsh\076 jobs
+runtrace: Sending '/bin/echo -e tsh\076 jobs' to shell
+runtrace: command=NEXT line=NEXT
+tsh> jobs
+Added job [2] 1766 /bin/echo -e tsh\076 jobs
+sigchld_handler: entering
+sigchld_handler: Job [2] (1766) in handler 
+sigchld_handler: Job [2] (1766) terminates OK (status 0)
+sigchld_handler: exiting
+runtrace: command=jobs line=jobs
+runtrace: Sending 'jobs' to shell
+runtrace: command=NEXT line=NEXT
+[1] (1765) Stopped    ./mytstpp
+runtrace: Ignoring blank line
+runtrace: command=quit line=quit
+runtrace: Sending 'quit' to shell

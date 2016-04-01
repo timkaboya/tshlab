@@ -1,0 +1,6 @@
+#
+# trace08.txt - Send fatal SIGINT to foreground job.
+#
+tsh> ./myintp
+trace08.txt: Runtrace timed out waiting for next shell prompt
+Child shell still running.

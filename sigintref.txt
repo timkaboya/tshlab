@@ -1,0 +1,39 @@
+Created environment variable SYNCFD=7
+#
+# trace08.txt - Send fatal SIGINT to foreground job.
+#
+runtrace: command=/bin/echo line=/bin/echo -e tsh\076 ./myintp
+runtrace: Sending '/bin/echo -e tsh\076 ./myintp' to shell
+runtrace: command=NEXT line=NEXT
+tsh> ./myintp
+sigchld_handler: entering
+waitfg: Process (25160) no longer the fg process
+Added job [1] 25160 /bin/echo -e tsh\076 ./myintp
+sigchld_handler: Job [1] (25160) deleted
+sigchld_handler: Job [1] (25160) terminates OK (status 0)
+sigchld_handler: exiting
+runtrace: command=./myintp line=./myintp
+runtrace: Sending './myintp' to shell
+runtrace: command=NEXT line=NEXT
+sigchld_handler: entering
+Job [1] (25161) terminated by signal 2
+waitfg: Process (25161) no longer the fg process
+Added job [1] 25161 ./myintp
+sigint_handler: entering
+sigint_handler: Job (25161) killed
+sigint_handler: exiting
+sigchld_handler: Job [1] (25161) deleted
+sigchld_handler: exiting
+runtrace: Ignoring blank line
+runtrace: command=/bin/echo line=/bin/echo -e tsh\076 quit
+runtrace: Sending '/bin/echo -e tsh\076 quit' to shell
+runtrace: command=NEXT line=NEXT
+tsh> quit
+sigchld_handler: entering
+waitfg: Process (25162) no longer the fg process
+Added job [1] 25162 /bin/echo -e tsh\076 quit
+sigchld_handler: Job [1] (25162) deleted
+sigchld_handler: Job [1] (25162) terminates OK (status 0)
+sigchld_handler: exiting
+runtrace: command=quit line=quit
+runtrace: Sending 'quit' to shell
